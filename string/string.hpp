@@ -1,8 +1,10 @@
 #ifndef STRING_HPP
 #define STRING_HPP
-#include "../libft.hpp"
+// #include "../libft.hpp"
 #include <vector>
 #include <algorithm>
+#include <list>
+#include <string>
 
 namespace ft {
 	class string : public std::string {

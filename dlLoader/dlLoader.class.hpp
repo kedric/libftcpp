@@ -1,7 +1,7 @@
 #ifndef DLLOADER_CLASS_CPP
 #define DLLOADER_CLASS_CPP
 #include <dlfcn.h>
-#include "../libft.hpp"
+#include <iostream>
 
 namespace ft {
 	class dlLoader {

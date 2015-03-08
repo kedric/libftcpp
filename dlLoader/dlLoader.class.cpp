@@ -17,7 +17,7 @@ ft::dlLoader::dlLoader(const char *path, int flag){
 void ft::dlLoader::open(const char *path, int flag){
 	this->dl_handle = dlopen(path, flag);
 	if (!this->dl_handle)
-		ft::printErr("dlopen error:", this->getErr());
+		std::cerr << "dlopen error: " << this->getErr() << std::endl;
 };
 
 bool ft::dlLoader::isOpen() const {
@@ -42,7 +42,7 @@ template<typename T>
 T ft::dlLoader::getSym(const char *symbol) {
 	T tmp = static_cast<T>(dlsym(this->dl_handle, symbol));
 	if(!tmp)
-		ft::printErr("dlSym error:", this->getErr());
+		std::cerr << "dlSym error:" << this->getErr() << std::endl;
 	return (tmp);
 };
 
