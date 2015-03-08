@@ -2,6 +2,7 @@
 #define DLLOADER_CLASS_CPP
 #include <dlfcn.h>
 #include "../libft.hpp"
+
 namespace ft {
 	class dlLoader {
 	private:
@@ -14,15 +15,17 @@ namespace ft {
 		dlLoader &operator=(const dlLoader &);
 
 		void open(const char *, int flag);
-		bool isOpen();
+		bool isOpen() const;
+		void close();
 
 		template<typename T>
 		T getSym(const char *);
 		
 		void *getHandle() const;
-		const char* getErr();
+		const char* getErr() const;
 		
 	};
 };
+
 std::ostream &operator<<(std::ostream &o, const ft::dlLoader& rhs);
 #endif
