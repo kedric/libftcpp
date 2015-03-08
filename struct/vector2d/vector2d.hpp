@@ -2,11 +2,19 @@
 # define VECTOR2D_HPP 
 
 # include "../../libft.hpp"
+
+//! ^
+//! |
+//! |    y = row
+//! y
+//! |    x = col
+//! | 
+//!  ------- X ----->
+
 namespace ft {
 	struct vector2d {
 		int 	x;
 		int 	y;
-
 						vector2d();
 						vector2d(int,int);
 						vector2d(vector2d const &);
