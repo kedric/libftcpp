@@ -20,22 +20,25 @@ OBJFLAG =  -O3 -Wextra -Werror -Wall -std=c++11
 
 .PHONY: all re fclean
 
-all: $(NAME)
+all: bin/$(NAME)
 
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ) 
+bin/$(NAME): $(OBJ) | bin
+	@ar rc $@ $? 
 	@echo "[Compilation $(NAME) ok]"
 
 %.o:%.cpp
 	@$(CC) -c -o $@ $(OBJFLAG) $^ -I$(INCDIR) 
 
+bin:
+	@mkdir -p $@
+
 clean:
-	@rm -f $(OBJ)
+	@rm -rf $(OBJ)
 	@echo "[$(RED)Supression des .o de $(BLUE)$(NAME) $(GREEN)ok$(RESET)]"
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -rf bin
 	@echo "[$(RED)Supression de $(BLUE)$(NAME) $(GREEN)ok$(RESET)]"
 
 re: fclean all
