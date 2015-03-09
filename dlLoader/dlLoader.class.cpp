@@ -38,14 +38,6 @@ void *ft::dlLoader::getHandle() const {
 	return this->dl_handle;
 };
 
-template<typename T>
-T ft::dlLoader::getSym(const char *symbol) {
-	T tmp = static_cast<T>(dlsym(this->dl_handle, symbol));
-	if(!tmp)
-		std::cerr << "dlSym error:" << this->getErr() << std::endl;
-	return (tmp);
-};
-
 const char* ft::dlLoader::getErr() const {
 	return (dlerror());
 };
