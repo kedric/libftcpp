@@ -17,7 +17,7 @@ ft::dlLoader::dlLoader(const char *path, int flag){
 void ft::dlLoader::open(const char *path, int flag){
 	this->dl_handle = dlopen(path, flag);
 	if (!this->dl_handle)
-		std::cerr << "dlopen error: " << this->getErr() << std::endl;
+		throw std::logic_error(this->getErr());
 };
 
 bool ft::dlLoader::isOpen() const {

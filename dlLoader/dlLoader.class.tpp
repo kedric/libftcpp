@@ -4,9 +4,9 @@
 
 template<typename T>
 T ft::dlLoader::getSym(const char *symbol) {
-	T tmp = (T)dlsym(this->dl_handle, symbol);
+	T tmp = reinterpret_cast<T>(dlsym(this->dl_handle, symbol));
 	if(!tmp)
-		std::cerr << "dlSym error:" << this->getErr() << std::endl;
+		throw std::logic_error(this->getErr());
 	return (tmp);
 };
 #endif
