@@ -29,5 +29,5 @@ namespace ft {
 
 std::ostream &operator<<(std::ostream &o, const ft::dlLoader& rhs);
 
-#include "dlloader.class.tpp"
+#include "dlLoader.class.tpp"
 #endif
