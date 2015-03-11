@@ -1,5 +1,5 @@
 #include "string.hpp"
-
+#include <cstring>
 ft::string::string() : std::string() {};
 ft::string::string(const ft::string & in)  : std::string(in) {};
 ft::string::string(const std::string & in)  : std::string(in) {};
@@ -149,11 +149,11 @@ double ft::string::toDouble() const {
 std::list<ft::string> ft::string::split(const char * delim) {
 	std::list<ft::string> tmp_list;
 	ft::string tmpString(*this);
-	char *tmp = std::strtok(&(tmpString)[0], delim);
+	char *tmp = ::strtok(&(tmpString)[0], delim);
 	while(tmp != NULL)
 	{
 		tmp_list.push_back(tmp);
-		tmp = std::strtok(NULL, delim);
+		tmp = ::strtok(NULL, delim);
 	};
 	return (tmp_list);
 };

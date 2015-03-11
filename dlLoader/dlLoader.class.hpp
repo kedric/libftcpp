@@ -2,7 +2,7 @@
 #define DLLOADER_CLASS_CPP
 #include <dlfcn.h>
 #include <iostream>
-
+#include <stdexcept>
 namespace ft {
 	class dlLoader {
 	private:
