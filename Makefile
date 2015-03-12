@@ -16,7 +16,7 @@ CC          =   c++
 CFLAGS      = -std=c++11
 
 
-OBJFLAG =  -O3 -Wextra -Werror -Wall -std=c++11 
+OBJFLAG =  -O3 -Wextra -Werror -Wall -std=c++11 -fPIC
 
 
 .PHONY: all re fclean
