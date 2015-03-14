@@ -1,3 +1,5 @@
+DBIN		=	lib
+
 NAME        =   libft.a
 
 INCDIR      =   inc/
@@ -21,17 +23,17 @@ OBJFLAG =  -O3 -Wextra -Werror -Wall -std=c++11 -fPIC
 
 .PHONY: all re fclean
 
-all: bin/$(NAME)
+all: $(DBIN)/$(NAME)
 
 
-bin/$(NAME): $(OBJ) | bin
+$(DBIN)/$(NAME): $(OBJ) | $(DBIN)
 	@ar rc $@ $? 
 	@echo "[Compilation $(NAME) ok]"
 
 %.o:%.cpp
 	@$(CC) -c -o $@ $(OBJFLAG) $^ -I$(INCDIR) 
 
-bin:
+$(DBIN):
 	@mkdir -p $@
 
 clean:
@@ -39,7 +41,7 @@ clean:
 	@echo "[$(RED)Supression des .o de $(BLUE)$(NAME) $(GREEN)ok$(RESET)]"
 
 fclean: clean
-	@rm -rf bin
+	@rm -rf $(DBIN)
 	@echo "[$(RED)Supression de $(BLUE)$(NAME) $(GREEN)ok$(RESET)]"
 
 re: fclean all
