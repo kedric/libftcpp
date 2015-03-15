@@ -1,6 +1,6 @@
 #include "ReaderInput.class.hpp"
 
-
+namespace ft{
 ReaderInput::~ReaderInput(void) {
 	if (_isFile)
 		delete _file;
@@ -61,3 +61,5 @@ void ReaderInput::setFilePath(std::string const &path){
 size_t	ReaderInput::getLineNB() const {
 	return (_line);
 };
+
+}

@@ -6,7 +6,7 @@
 # include <iostream>
 # include <istream>
 # include <fstream>
-
+namespace ft{
 class ReaderInput {
     private:
     	bool			_isFile;
@@ -27,6 +27,6 @@ ReaderInput&         operator=(ReaderInput const & in);
 };
 
 std::ostream & operator<<(std::ostream& o, ReaderInput const & p);
-
+}
 #endif
 
