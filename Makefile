@@ -9,6 +9,7 @@ SRC         =   format/format.cpp \
 				string/string.cpp \
 				Any/Any.class.cpp \
 				dlLoader/dlLoader.class.cpp \
+				ReaderInput/ReaderInput.class.cpp \
 				struct/vector2d/vector2d.cpp
 
 OBJ         =   $(SRC:.cpp=.o)
