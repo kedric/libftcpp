@@ -113,6 +113,16 @@ ft::string ft::string::trim() {
 	return (this->ltrim().rtrim());
 };
 
+ft::string ft::string::removeSpace() {
+	ft::string tmp;
+	for(auto c : *this){
+		if (::isspace(c))
+			continue;
+		tmp+=c;
+	}
+	return (tmp);
+};
+
 int ft::string::toInt() const {
 	return (std::stoi(*this));
 };

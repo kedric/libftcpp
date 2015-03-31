@@ -45,6 +45,7 @@ namespace ft {
 		ft::string 				ltrim();
 		ft::string 				rtrim();
 		ft::string 				trim();
+		ft::string 				removeSpace();
 		ft::string 				replace(ft::string, ft::string);
 		ft::string 				replace(ft::string, ft::string, size_t n);
 
