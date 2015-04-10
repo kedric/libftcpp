@@ -1,7 +1,7 @@
 #ifndef TEST_HPP
 #define TEST_HPP
-#include "../libft.hpp"
-#include "../test_framwork/unit_test.hpp"
+#include "libft.hpp"
+#include "test_framwork/unit_test.hpp"
 
 void format();
 void vector2d_test();

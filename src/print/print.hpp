@@ -1,6 +1,6 @@
 #ifndef PRINT_HPP
 #define PRINT_HPP
-#include "../libft.hpp"
+#include "libft.hpp"
 
 #define BOLD_TERM 		"1;"
 #define DIM_TERM 		"2;"

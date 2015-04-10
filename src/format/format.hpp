@@ -1,6 +1,6 @@
 #ifndef FORMAT_HPP
 #define FORMAT_HPP
-#include "../libft.hpp"
+#include "libft.hpp"
 
 namespace ft {
 class string;

@@ -6,8 +6,8 @@
 namespace ft{
 	struct color {
 		unsigned char r; 
-		unsigned char g; 
 		unsigned char b;
+		unsigned char g; 
 
 		color();
 		color(ft::color const &in);
