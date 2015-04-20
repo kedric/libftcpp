@@ -38,6 +38,11 @@ std::string format(T arg);
 template<typename T, typename... Args>
 std::string format(T value, Args... args);
 
+template<typename T>
+std::string formatNS(T arg);
+template<typename T, typename... Args>
+std::string formatNS(T value, Args... args);
+
 
 
 #include "format.tpp"

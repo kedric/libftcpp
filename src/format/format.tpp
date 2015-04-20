@@ -27,8 +27,6 @@ std::string _toString(std::list<T> arg)
 	return(o.str());
 }
 
-
-
 template<typename KEY,typename value>
 std::string _toString(std::map<KEY, value> arg)
 {
@@ -82,6 +80,22 @@ std::string format(T value, Args... args) {
 	o << _toString(value);
 	o << " ";
 	o << format(args...);
+	return(o.str());
+}
+
+template<typename T>
+std::string formatNS(T arg) {
+	std::ostringstream o;
+	o << _toString(arg);
+	return(o.str());
+}
+
+
+template<typename T, typename... Args>
+std::string formatNS(T value, Args... args) {
+	std::ostringstream o;
+	o << _toString(value);
+	o << formatNS(args...);
 	return(o.str());
 }
 
