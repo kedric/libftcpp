@@ -1,5 +1,8 @@
 CMakeFiles
 CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
 
 # Compiled Object files
 *.slo
@@ -29,3 +32,4 @@ CMakeCache.txt
 *.exe
 *.out
 *.app
+bin

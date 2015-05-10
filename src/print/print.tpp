@@ -3,14 +3,14 @@
 #include "print.hpp"
 
 template<typename T>
-int print(T value) {
+int print(T const &value) {
 	std::string tmp(format(value));
 	std::cout << tmp << std::endl;
 	return(tmp.length());
 }
 
 template<typename T, typename... Args>
-int print(T value, Args... args) {
+int print(T const &value, Args const &... args) {
 	std::string tmp(format(value, args...));
 	std::cout << tmp << std::endl;
 	return(tmp.length());

@@ -3,7 +3,7 @@
 #include "format.hpp"
 
 template<typename T>
-std::string _toString(T arg)
+std::string _toString(T const &arg)
 {
 	std::ostringstream o;
 	o << arg;
@@ -67,7 +67,7 @@ std::string _toString(std::map<std::string, value> arg)
 
 
 template<typename T>
-std::string format(T arg) {
+std::string format(T const &arg) {
 	std::ostringstream o;
 	o << _toString(arg);
 	return(o.str());
@@ -75,7 +75,7 @@ std::string format(T arg) {
 
 
 template<typename T, typename... Args>
-std::string format(T value, Args... args) {
+std::string format(T const &value, Args const &... args) {
 	std::ostringstream o;
 	o << _toString(value);
 	o << " ";

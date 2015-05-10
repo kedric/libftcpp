@@ -42,10 +42,10 @@ RM = /usr/local/Cellar/cmake/3.2.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jmancero/gitperso/libftcpp
+CMAKE_SOURCE_DIR = /Users/jmancero/gitperso/taskmaster/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jmancero/gitperso/libftcpp
+CMAKE_BINARY_DIR = /Users/jmancero/gitperso/taskmaster/test
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jmancero/gitperso/libftcpp/CMakeFiles /Users/jmancero/gitperso/libftcpp/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jmancero/gitperso/libftcpp/CMakeFiles 0
+	cd /Users/jmancero/gitperso/taskmaster/test && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jmancero/gitperso/taskmaster/test/CMakeFiles /Users/jmancero/gitperso/taskmaster/test/libft/CMakeFiles/progress.marks
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f CMakeFiles/Makefile2 libft/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jmancero/gitperso/taskmaster/test/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f CMakeFiles/Makefile2 libft/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,30 +88,31 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f CMakeFiles/Makefile2 libft/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f CMakeFiles/Makefile2 libft/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jmancero/gitperso/taskmaster/test && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named ft
+# Convenience name for target.
+libft/CMakeFiles/ft.dir/rule:
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f CMakeFiles/Makefile2 libft/CMakeFiles/ft.dir/rule
+.PHONY : libft/CMakeFiles/ft.dir/rule
 
-# Build rule for target.
-ft: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ft
+# Convenience name for target.
+ft: libft/CMakeFiles/ft.dir/rule
 .PHONY : ft
 
 # fast build rule for target.
 ft/fast:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/build
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/build
 .PHONY : ft/fast
 
 src/Any/Any.class.o: src/Any/Any.class.cpp.o
@@ -119,7 +120,7 @@ src/Any/Any.class.o: src/Any/Any.class.cpp.o
 
 # target to build an object file
 src/Any/Any.class.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/Any/Any.class.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/Any/Any.class.cpp.o
 .PHONY : src/Any/Any.class.cpp.o
 
 src/Any/Any.class.i: src/Any/Any.class.cpp.i
@@ -127,7 +128,7 @@ src/Any/Any.class.i: src/Any/Any.class.cpp.i
 
 # target to preprocess a source file
 src/Any/Any.class.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/Any/Any.class.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/Any/Any.class.cpp.i
 .PHONY : src/Any/Any.class.cpp.i
 
 src/Any/Any.class.s: src/Any/Any.class.cpp.s
@@ -135,7 +136,7 @@ src/Any/Any.class.s: src/Any/Any.class.cpp.s
 
 # target to generate assembly for a file
 src/Any/Any.class.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/Any/Any.class.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/Any/Any.class.cpp.s
 .PHONY : src/Any/Any.class.cpp.s
 
 src/ReaderInput/ReaderInput.class.o: src/ReaderInput/ReaderInput.class.cpp.o
@@ -143,7 +144,7 @@ src/ReaderInput/ReaderInput.class.o: src/ReaderInput/ReaderInput.class.cpp.o
 
 # target to build an object file
 src/ReaderInput/ReaderInput.class.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ReaderInput/ReaderInput.class.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/ReaderInput/ReaderInput.class.cpp.o
 .PHONY : src/ReaderInput/ReaderInput.class.cpp.o
 
 src/ReaderInput/ReaderInput.class.i: src/ReaderInput/ReaderInput.class.cpp.i
@@ -151,7 +152,7 @@ src/ReaderInput/ReaderInput.class.i: src/ReaderInput/ReaderInput.class.cpp.i
 
 # target to preprocess a source file
 src/ReaderInput/ReaderInput.class.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ReaderInput/ReaderInput.class.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/ReaderInput/ReaderInput.class.cpp.i
 .PHONY : src/ReaderInput/ReaderInput.class.cpp.i
 
 src/ReaderInput/ReaderInput.class.s: src/ReaderInput/ReaderInput.class.cpp.s
@@ -159,7 +160,7 @@ src/ReaderInput/ReaderInput.class.s: src/ReaderInput/ReaderInput.class.cpp.s
 
 # target to generate assembly for a file
 src/ReaderInput/ReaderInput.class.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/ReaderInput/ReaderInput.class.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/ReaderInput/ReaderInput.class.cpp.s
 .PHONY : src/ReaderInput/ReaderInput.class.cpp.s
 
 src/dlLoader/dlLoader.class.o: src/dlLoader/dlLoader.class.cpp.o
@@ -167,7 +168,7 @@ src/dlLoader/dlLoader.class.o: src/dlLoader/dlLoader.class.cpp.o
 
 # target to build an object file
 src/dlLoader/dlLoader.class.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/dlLoader/dlLoader.class.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/dlLoader/dlLoader.class.cpp.o
 .PHONY : src/dlLoader/dlLoader.class.cpp.o
 
 src/dlLoader/dlLoader.class.i: src/dlLoader/dlLoader.class.cpp.i
@@ -175,7 +176,7 @@ src/dlLoader/dlLoader.class.i: src/dlLoader/dlLoader.class.cpp.i
 
 # target to preprocess a source file
 src/dlLoader/dlLoader.class.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/dlLoader/dlLoader.class.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/dlLoader/dlLoader.class.cpp.i
 .PHONY : src/dlLoader/dlLoader.class.cpp.i
 
 src/dlLoader/dlLoader.class.s: src/dlLoader/dlLoader.class.cpp.s
@@ -183,7 +184,7 @@ src/dlLoader/dlLoader.class.s: src/dlLoader/dlLoader.class.cpp.s
 
 # target to generate assembly for a file
 src/dlLoader/dlLoader.class.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/dlLoader/dlLoader.class.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/dlLoader/dlLoader.class.cpp.s
 .PHONY : src/dlLoader/dlLoader.class.cpp.s
 
 src/format/format.o: src/format/format.cpp.o
@@ -191,7 +192,7 @@ src/format/format.o: src/format/format.cpp.o
 
 # target to build an object file
 src/format/format.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/format/format.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/format/format.cpp.o
 .PHONY : src/format/format.cpp.o
 
 src/format/format.i: src/format/format.cpp.i
@@ -199,7 +200,7 @@ src/format/format.i: src/format/format.cpp.i
 
 # target to preprocess a source file
 src/format/format.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/format/format.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/format/format.cpp.i
 .PHONY : src/format/format.cpp.i
 
 src/format/format.s: src/format/format.cpp.s
@@ -207,7 +208,7 @@ src/format/format.s: src/format/format.cpp.s
 
 # target to generate assembly for a file
 src/format/format.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/format/format.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/format/format.cpp.s
 .PHONY : src/format/format.cpp.s
 
 src/print/print.o: src/print/print.cpp.o
@@ -215,7 +216,7 @@ src/print/print.o: src/print/print.cpp.o
 
 # target to build an object file
 src/print/print.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/print/print.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/print/print.cpp.o
 .PHONY : src/print/print.cpp.o
 
 src/print/print.i: src/print/print.cpp.i
@@ -223,7 +224,7 @@ src/print/print.i: src/print/print.cpp.i
 
 # target to preprocess a source file
 src/print/print.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/print/print.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/print/print.cpp.i
 .PHONY : src/print/print.cpp.i
 
 src/print/print.s: src/print/print.cpp.s
@@ -231,7 +232,7 @@ src/print/print.s: src/print/print.cpp.s
 
 # target to generate assembly for a file
 src/print/print.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/print/print.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/print/print.cpp.s
 .PHONY : src/print/print.cpp.s
 
 src/string/string.o: src/string/string.cpp.o
@@ -239,7 +240,7 @@ src/string/string.o: src/string/string.cpp.o
 
 # target to build an object file
 src/string/string.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/string/string.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/string/string.cpp.o
 .PHONY : src/string/string.cpp.o
 
 src/string/string.i: src/string/string.cpp.i
@@ -247,7 +248,7 @@ src/string/string.i: src/string/string.cpp.i
 
 # target to preprocess a source file
 src/string/string.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/string/string.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/string/string.cpp.i
 .PHONY : src/string/string.cpp.i
 
 src/string/string.s: src/string/string.cpp.s
@@ -255,7 +256,7 @@ src/string/string.s: src/string/string.cpp.s
 
 # target to generate assembly for a file
 src/string/string.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/string/string.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/string/string.cpp.s
 .PHONY : src/string/string.cpp.s
 
 src/struct/color/color.o: src/struct/color/color.cpp.o
@@ -263,7 +264,7 @@ src/struct/color/color.o: src/struct/color/color.cpp.o
 
 # target to build an object file
 src/struct/color/color.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/struct/color/color.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/struct/color/color.cpp.o
 .PHONY : src/struct/color/color.cpp.o
 
 src/struct/color/color.i: src/struct/color/color.cpp.i
@@ -271,7 +272,7 @@ src/struct/color/color.i: src/struct/color/color.cpp.i
 
 # target to preprocess a source file
 src/struct/color/color.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/struct/color/color.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/struct/color/color.cpp.i
 .PHONY : src/struct/color/color.cpp.i
 
 src/struct/color/color.s: src/struct/color/color.cpp.s
@@ -279,7 +280,7 @@ src/struct/color/color.s: src/struct/color/color.cpp.s
 
 # target to generate assembly for a file
 src/struct/color/color.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/struct/color/color.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/struct/color/color.cpp.s
 .PHONY : src/struct/color/color.cpp.s
 
 src/struct/vector2d/vector2d.o: src/struct/vector2d/vector2d.cpp.o
@@ -287,7 +288,7 @@ src/struct/vector2d/vector2d.o: src/struct/vector2d/vector2d.cpp.o
 
 # target to build an object file
 src/struct/vector2d/vector2d.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/struct/vector2d/vector2d.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/struct/vector2d/vector2d.cpp.o
 .PHONY : src/struct/vector2d/vector2d.cpp.o
 
 src/struct/vector2d/vector2d.i: src/struct/vector2d/vector2d.cpp.i
@@ -295,7 +296,7 @@ src/struct/vector2d/vector2d.i: src/struct/vector2d/vector2d.cpp.i
 
 # target to preprocess a source file
 src/struct/vector2d/vector2d.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/struct/vector2d/vector2d.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/struct/vector2d/vector2d.cpp.i
 .PHONY : src/struct/vector2d/vector2d.cpp.i
 
 src/struct/vector2d/vector2d.s: src/struct/vector2d/vector2d.cpp.s
@@ -303,7 +304,7 @@ src/struct/vector2d/vector2d.s: src/struct/vector2d/vector2d.cpp.s
 
 # target to generate assembly for a file
 src/struct/vector2d/vector2d.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/struct/vector2d/vector2d.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/struct/vector2d/vector2d.cpp.s
 .PHONY : src/struct/vector2d/vector2d.cpp.s
 
 src/test/any_test.o: src/test/any_test.cpp.o
@@ -311,7 +312,7 @@ src/test/any_test.o: src/test/any_test.cpp.o
 
 # target to build an object file
 src/test/any_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/any_test.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/any_test.cpp.o
 .PHONY : src/test/any_test.cpp.o
 
 src/test/any_test.i: src/test/any_test.cpp.i
@@ -319,7 +320,7 @@ src/test/any_test.i: src/test/any_test.cpp.i
 
 # target to preprocess a source file
 src/test/any_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/any_test.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/any_test.cpp.i
 .PHONY : src/test/any_test.cpp.i
 
 src/test/any_test.s: src/test/any_test.cpp.s
@@ -327,7 +328,7 @@ src/test/any_test.s: src/test/any_test.cpp.s
 
 # target to generate assembly for a file
 src/test/any_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/any_test.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/any_test.cpp.s
 .PHONY : src/test/any_test.cpp.s
 
 src/test/format.o: src/test/format.cpp.o
@@ -335,7 +336,7 @@ src/test/format.o: src/test/format.cpp.o
 
 # target to build an object file
 src/test/format.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/format.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/format.cpp.o
 .PHONY : src/test/format.cpp.o
 
 src/test/format.i: src/test/format.cpp.i
@@ -343,7 +344,7 @@ src/test/format.i: src/test/format.cpp.i
 
 # target to preprocess a source file
 src/test/format.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/format.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/format.cpp.i
 .PHONY : src/test/format.cpp.i
 
 src/test/format.s: src/test/format.cpp.s
@@ -351,7 +352,7 @@ src/test/format.s: src/test/format.cpp.s
 
 # target to generate assembly for a file
 src/test/format.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/format.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/format.cpp.s
 .PHONY : src/test/format.cpp.s
 
 src/test/init.o: src/test/init.cpp.o
@@ -359,7 +360,7 @@ src/test/init.o: src/test/init.cpp.o
 
 # target to build an object file
 src/test/init.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/init.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/init.cpp.o
 .PHONY : src/test/init.cpp.o
 
 src/test/init.i: src/test/init.cpp.i
@@ -367,7 +368,7 @@ src/test/init.i: src/test/init.cpp.i
 
 # target to preprocess a source file
 src/test/init.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/init.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/init.cpp.i
 .PHONY : src/test/init.cpp.i
 
 src/test/init.s: src/test/init.cpp.s
@@ -375,7 +376,7 @@ src/test/init.s: src/test/init.cpp.s
 
 # target to generate assembly for a file
 src/test/init.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/init.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/init.cpp.s
 .PHONY : src/test/init.cpp.s
 
 src/test/string_test.o: src/test/string_test.cpp.o
@@ -383,7 +384,7 @@ src/test/string_test.o: src/test/string_test.cpp.o
 
 # target to build an object file
 src/test/string_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/string_test.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/string_test.cpp.o
 .PHONY : src/test/string_test.cpp.o
 
 src/test/string_test.i: src/test/string_test.cpp.i
@@ -391,7 +392,7 @@ src/test/string_test.i: src/test/string_test.cpp.i
 
 # target to preprocess a source file
 src/test/string_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/string_test.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/string_test.cpp.i
 .PHONY : src/test/string_test.cpp.i
 
 src/test/string_test.s: src/test/string_test.cpp.s
@@ -399,7 +400,7 @@ src/test/string_test.s: src/test/string_test.cpp.s
 
 # target to generate assembly for a file
 src/test/string_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/string_test.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/string_test.cpp.s
 .PHONY : src/test/string_test.cpp.s
 
 src/test/vector2d.o: src/test/vector2d.cpp.o
@@ -407,7 +408,7 @@ src/test/vector2d.o: src/test/vector2d.cpp.o
 
 # target to build an object file
 src/test/vector2d.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/vector2d.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/vector2d.cpp.o
 .PHONY : src/test/vector2d.cpp.o
 
 src/test/vector2d.i: src/test/vector2d.cpp.i
@@ -415,7 +416,7 @@ src/test/vector2d.i: src/test/vector2d.cpp.i
 
 # target to preprocess a source file
 src/test/vector2d.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/vector2d.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/vector2d.cpp.i
 .PHONY : src/test/vector2d.cpp.i
 
 src/test/vector2d.s: src/test/vector2d.cpp.s
@@ -423,7 +424,7 @@ src/test/vector2d.s: src/test/vector2d.cpp.s
 
 # target to generate assembly for a file
 src/test/vector2d.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test/vector2d.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test/vector2d.cpp.s
 .PHONY : src/test/vector2d.cpp.s
 
 src/test_framwork/unit_test.o: src/test_framwork/unit_test.cpp.o
@@ -431,7 +432,7 @@ src/test_framwork/unit_test.o: src/test_framwork/unit_test.cpp.o
 
 # target to build an object file
 src/test_framwork/unit_test.cpp.o:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test_framwork/unit_test.cpp.o
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test_framwork/unit_test.cpp.o
 .PHONY : src/test_framwork/unit_test.cpp.o
 
 src/test_framwork/unit_test.i: src/test_framwork/unit_test.cpp.i
@@ -439,7 +440,7 @@ src/test_framwork/unit_test.i: src/test_framwork/unit_test.cpp.i
 
 # target to preprocess a source file
 src/test_framwork/unit_test.cpp.i:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test_framwork/unit_test.cpp.i
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test_framwork/unit_test.cpp.i
 .PHONY : src/test_framwork/unit_test.cpp.i
 
 src/test_framwork/unit_test.s: src/test_framwork/unit_test.cpp.s
@@ -447,7 +448,7 @@ src/test_framwork/unit_test.s: src/test_framwork/unit_test.cpp.s
 
 # target to generate assembly for a file
 src/test_framwork/unit_test.cpp.s:
-	$(MAKE) -f CMakeFiles/ft.dir/build.make CMakeFiles/ft.dir/src/test_framwork/unit_test.cpp.s
+	cd /Users/jmancero/gitperso/taskmaster/test && $(MAKE) -f libft/CMakeFiles/ft.dir/build.make libft/CMakeFiles/ft.dir/src/test_framwork/unit_test.cpp.s
 .PHONY : src/test_framwork/unit_test.cpp.s
 
 # Help Target
@@ -512,6 +513,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jmancero/gitperso/taskmaster/test && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

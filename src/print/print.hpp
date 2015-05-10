@@ -25,9 +25,9 @@ std::string endl();
 ** print cout function
 */
 template<typename T>
-int print(T value);
+int print(T const &value);
 template<typename T, typename... Args>
-int print(T value, Args... args);
+int print(T const &value, Args const &... args);
 
 /*
 ** print cerr function

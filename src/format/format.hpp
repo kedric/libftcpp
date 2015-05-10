@@ -11,7 +11,7 @@ class string;
 **
 */
 template<typename T>
-std::string _toString(T arg);
+std::string _toString(T const &arg);
 
 /*
 ** list case
@@ -34,9 +34,9 @@ std::string _toString(std::map<std::string, std::string> arg);
 ** format function
 */
 template<typename T>
-std::string format(T arg);
+std::string format(T const &arg);
 template<typename T, typename... Args>
-std::string format(T value, Args... args);
+std::string format(T const &value, Args const &... args);
 
 template<typename T>
 std::string formatNS(T arg);

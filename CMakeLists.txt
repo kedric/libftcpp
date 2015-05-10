@@ -10,10 +10,10 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_compile_options("--std=c++11" "-Wall" "-Wextra" "-Werror" "-O3")
 
 file(
-        GLOB_RECURSE
-        srcFile
-        inc/*
-        src/*
+	GLOB_RECURSE
+	srcFile
+	inc/*
+	src/*
 )
 
 add_library(
