@@ -33,9 +33,9 @@ int print(T const &value, Args const &... args);
 ** print cerr function
 */
 template<typename T, typename... Args>
-int printErr(T value, Args... args);
+int printErr(T const &value, Args const &... args);
 template<typename T>
-int printErr(T value);
+int printErr(T const &value);
 
 /*
 ** print colors function
@@ -45,9 +45,9 @@ int printErr(T value);
 ** exemple : "R-|1G-|R|G|Y|B|C|M"
 */
 template<typename T, typename... Args>
-int printC(const char* color,T value, Args... args);
+int printC(const char* color,T const &value, Args const &... args);
 template<typename T>
-int printC(const char* color,T value);
+int printC(const char* color,T const &value);
 const char* getMod(char c);
 const char* getColor(char c);
 

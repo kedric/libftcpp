@@ -17,21 +17,21 @@ int print(T const &value, Args const &... args) {
 }
 
 template<typename T>
-int printErr(T value) {
+int printErr(T const &value) {
 	std::string tmp(format(value));
 	std::cerr << tmp << std::endl;
 	return(tmp.length());
 }
 
 template<typename T, typename... Args>
-int printErr(T value, Args... args) {
+int printErr(T const &value, Args const &... args) {
 	std::string tmp(format(value, args...));
 	std::cerr << tmp << std::endl;
 	return(tmp.length());
 }
 
 template<typename T>
-int printC(const char* color,T value) {
+int printC(const char* color,T const &value) {
 	int move = 1;
 	std::string tmp("\033[");
 	tmp += ft::getMod(color[move - 1]);
@@ -45,7 +45,7 @@ int printC(const char* color,T value) {
 }
 
 template<typename T, typename... Args>
-int printC(const char* color,T value, Args... args) {
+int printC(const char* color,T const &value, Args const &... args) {
 	int move = 1; // for move color string
 	std::string tmp("\033[");
 	

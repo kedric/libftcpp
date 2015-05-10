@@ -84,7 +84,7 @@ std::string format(T const &value, Args const &... args) {
 }
 
 template<typename T>
-std::string formatNS(T arg) {
+std::string formatNS(T const &arg) {
 	std::ostringstream o;
 	o << _toString(arg);
 	return(o.str());
@@ -92,7 +92,7 @@ std::string formatNS(T arg) {
 
 
 template<typename T, typename... Args>
-std::string formatNS(T value, Args... args) {
+std::string formatNS(T const &value, Args const &... args) {
 	std::ostringstream o;
 	o << _toString(value);
 	o << formatNS(args...);
